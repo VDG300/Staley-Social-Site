@@ -24,11 +24,11 @@ export default function Navbar() {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-navy/80 backdrop-blur-xl border-b border-white/5" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-ink/80 backdrop-blur-xl border-b border-white/5" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-bold tracking-tight">
-          The <span className="gold-gradient">Staley</span> Social
+        <a href="#" className="text-xl font-bold tracking-tight font-display">
+          The <span className="brand-gradient">Staley</span> Social
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -41,9 +41,9 @@ export default function Navbar() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="text-sm bg-gold text-navy font-semibold px-5 py-2 rounded-full"
+            className="text-sm bg-brand text-white font-semibold px-5 py-2 rounded-full"
           >
-            Book a Call
+            Book a call
           </motion.a>
         </div>
 
@@ -57,14 +57,14 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-navy border-t border-white/5 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-ink border-t border-white/5 px-6 py-4 flex flex-col gap-4">
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-white/70 hover:text-white transition-colors">
               {l.label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="text-sm bg-gold text-navy font-semibold px-5 py-2 rounded-full text-center">
-            Book a Call
+          <a href="#contact" onClick={() => setOpen(false)} className="text-sm bg-brand text-white font-semibold px-5 py-2 rounded-full text-center">
+            Book a call
           </a>
         </div>
       )}

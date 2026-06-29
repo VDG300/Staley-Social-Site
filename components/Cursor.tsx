@@ -37,7 +37,7 @@ export default function Cursor() {
         <motion.div
           animate={{ scale: active ? 2.6 : 1, opacity: active ? 0.5 : 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-3 h-3 rounded-full bg-gold"
+          className="w-3 h-3 rounded-full bg-brand"
         />
       </motion.div>
       <motion.div
@@ -46,7 +46,7 @@ export default function Cursor() {
       >
         <motion.div
           animate={{ scale: active ? 1.5 : 1 }}
-          className="w-9 h-9 rounded-full border border-gold/40"
+          className="w-9 h-9 rounded-full border border-brand/40"
         />
       </motion.div>
     </>

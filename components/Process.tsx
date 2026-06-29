@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Reveal } from "./motion";
 
 const steps = [
-  { num: "01", title: "Free Audit", desc: "We dig into your ads, SEO, social, and GBP and find exactly where you're leaving money on the table." },
-  { num: "02", title: "Custom Game Plan", desc: "No cookie-cutter packages. A 90-day strategy built for your goals, market, and budget." },
-  { num: "03", title: "Build & Launch", desc: "We execute fast. Campaigns, content, and systems go live while you stay focused on your business." },
-  { num: "04", title: "Scale & Report", desc: "Monthly reporting with real numbers. We double down on what works and cut what doesn't." },
+  { num: "01", title: "Free Audit", desc: "We pull up your Google profile, ads account, and website on a 15-minute screen share. You see exactly what's costing you customers before you spend a dollar." },
+  { num: "02", title: "Custom Game Plan", desc: "A strategy built for your business, your market, and your goals — not a template. We tell you what to fix first, what to build next, and what results to expect." },
+  { num: "03", title: "Build & Launch", desc: "Days 1-30: stop the bleeding. Redirect bad traffic, fix tracking, launch quick-win campaigns. You start seeing movement in the first month." },
+  { num: "04", title: "Scale & Report", desc: "Days 31-90: optimize, scale what's working, cut what isn't. Monthly reports you can read in 5 minutes. KPIs tied to real revenue, not impressions." },
 ];
 
 export default function Process() {
@@ -14,9 +14,8 @@ export default function Process() {
     <section id="process" className="py-28 px-6">
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center mb-16">
-          <p className="text-gold text-sm font-semibold tracking-widest uppercase mb-3">How It Works</p>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight">Our 90-Day Process</h2>
-          <p className="text-white/40 mt-4 max-w-xl mx-auto">From zero to measurable growth in 90 days. Here&apos;s exactly how.</p>
+          <p className="text-brand text-sm font-bold tracking-widest uppercase mb-3">How We Work</p>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight">From signed to scaling in 90 days.</h2>
         </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -27,12 +26,11 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="relative"
             >
-              <div className="glow-card glass rounded-2xl p-8 h-full">
-                <div className="text-5xl font-black gold-gradient mb-4">{s.num}</div>
+              <div className="glow-card glass rounded-2xl p-8 h-full" data-cursor>
+                <div className="text-5xl font-black brand-gradient mb-4">{s.num}</div>
                 <h3 className="text-lg font-bold mb-3">{s.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-mute text-sm leading-relaxed">{s.desc}</p>
               </div>
             </motion.div>
           ))}

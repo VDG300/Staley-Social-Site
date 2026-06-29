@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,14 +15,18 @@ html {
 }
 
 body {
-  background: #060912;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  background: #090910;
+  color: #ebebf2;
+  font-family: 'Nunito Sans', sans-serif;
   overflow-x: hidden;
 }
 
-.gold-gradient {
-  background: linear-gradient(135deg, #c9a84c, #e8c96a, #f4e0a0);
+h1, h2, h3, .font-display {
+  font-family: 'Raleway', sans-serif;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #2d63d8, #5b87ec, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,7 +35,7 @@ body {
 .glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* Animated aurora background */
@@ -46,23 +50,23 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.45;
+  opacity: 0.4;
 }
 .aurora .a1 {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, #c9a84c, transparent 70%);
+  background: radial-gradient(circle, #2d63d8, transparent 70%);
   top: -150px; left: -100px;
   animation: drift1 18s ease-in-out infinite alternate;
 }
 .aurora .a2 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, #3b5bdb, transparent 70%);
+  background: radial-gradient(circle, #8b5cf6, transparent 70%);
   bottom: -150px; right: -100px;
   animation: drift2 22s ease-in-out infinite alternate;
 }
 .aurora .a3 {
   width: 420px; height: 420px;
-  background: radial-gradient(circle, #9c6bff, transparent 70%);
+  background: radial-gradient(circle, #14b8a6, transparent 70%);
   top: 40%; left: 50%;
   animation: drift3 26s ease-in-out infinite alternate;
 }
@@ -112,7 +116,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(201,168,76,0.6), transparent 40%, transparent 60%, rgba(156,107,255,0.4));
+  background: linear-gradient(135deg, rgba(45,99,216,0.7), transparent 40%, transparent 60%, rgba(139,92,246,0.5));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -127,7 +131,7 @@ body {
 }
 
 .shimmer {
-  background: linear-gradient(110deg, #c9a84c 20%, #fff6d8 50%, #c9a84c 80%);
+  background: linear-gradient(110deg, #2d63d8 20%, #a5c0ff 50%, #2d63d8 80%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
