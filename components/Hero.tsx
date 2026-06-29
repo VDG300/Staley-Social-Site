@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Counter } from "./motion";
+import Magnetic from "./Magnetic";
 
 const words1 = ["We", "Don't", "Just", "Post."];
 const words2 = ["We", "Grow", "Brands."];
@@ -71,22 +72,22 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.95 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="bg-gold text-navy font-bold px-8 py-4 rounded-full text-base shadow-lg shadow-gold/20"
-          >
-            Book Your Free Audit
-          </motion.a>
-          <motion.a
-            href="#results"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="glass border border-white/10 text-white font-medium px-8 py-4 rounded-full text-base"
-          >
-            See Our Results
-          </motion.a>
+          <Magnetic>
+            <a
+              href="#contact"
+              className="block bg-gold text-navy font-bold px-8 py-4 rounded-full text-base shadow-lg shadow-gold/20"
+            >
+              Book Your Free Audit
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href="#results"
+              className="block glass border border-white/10 text-white font-medium px-8 py-4 rounded-full text-base"
+            >
+              See Our Results
+            </a>
+          </Magnetic>
         </motion.div>
 
         <motion.div
